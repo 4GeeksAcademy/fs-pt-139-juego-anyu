@@ -16,22 +16,35 @@
 
 <body>
   <!-- Write your HTML code here, you can delete everything withing the body tags -->
-  <div class="container-fluid text-center">
-    <h1 class="mt-5">Rock, Paper, Scissors, Lizard, Spock</h1>
-    <div class="container">
-      <div class="ratio ratio-16x9">
-        <iframe class="w-100 h-100" src="https://www.youtube.com/embed/_PUEoDYpUyQ?si=L9oODezoxnaU0pQu"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
+ <div class="container text-center mt-4">
+  <h1>Rock, Paper, Scissors, Lizard, Spock</h1>
 
-    </div>
-    <div class="fixed-bottom p-4">
-      Made with ❤️ by Monkeyjp
-    </div>
+  <img 
+    src="https://i.pinimg.com/564x/ce/65/6a/ce656ad21c802346b8e1f14261b12f17.jpg" 
+    class="img-fluid rounded mt-3" 
+    alt="Game image"
+  />
+
+  <h3 class="mt-4">Choose your option:</h3>
+
+  <div class="mt-3">
+    <button class="btn btn-secondary m-2 choice-btn" data-choice="rock">Rock</button>
+    <button class="btn btn-secondary m-2 choice-btn" data-choice="paper">Paper</button>
+    <button class="btn btn-secondary m-2 choice-btn" data-choice="scissors">Scissors</button>
+    <button class="btn btn-secondary m-2 choice-btn" data-choice="lizard">Lizard</button>
+    <button class="btn btn-secondary m-2 choice-btn" data-choice="spock">Spock</button>
   </div>
 
+  <div class="mt-4">
+    <p id="user-choice">User chose:</p>
+    <p id="computer-choice">Computer chose:</p>
+    <h2 id="result"></h2>
+  </div>
+
+  <div class="mt-5">
+    Made with ❤️ by Monkeyjp
+  </div>
+</div>
   <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
   <script type="module" src="/app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
