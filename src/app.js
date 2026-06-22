@@ -21,7 +21,7 @@ buttons.forEach((button) => {
     userChoiceText.textContent = `User chose: ${userChoice}`;
     computerChoiceText.textContent = `Computer chose: ${computerChoice}`;
 
-    const result = getResult(userChoice, computerChoice);
+    const result = optenerResultado(userChoice, computerChoice);
     resultText.textContent = result;
   });
 });
@@ -31,15 +31,15 @@ function getComputerChoice() {
   return choices[randomIndex];
 }
 
-function getResult(userChoice, computerChoice) {
+function optenerResultado(userChoice, computerChoice) {
   if (userChoice === computerChoice) {
-    return "It's a draw!";
+    return "Estas empatado!";
   }
 
   if (rules[userChoice].includes(computerChoice)) {
-    return "You win!";
+    return "Has ganado!";
   }
 
-  return "You lose";
+  return "Has perdido!";
 }
 
